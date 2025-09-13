@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files (HTML, CSS, JS)
+// Serve static frontend files
 app.use(express.static(path.join(__dirname)));
 
 // Contact form API
@@ -27,7 +27,7 @@ app.post("/send-email", async (req, res) => {
       service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, // Use App Password
+        pass: process.env.EMAIL_PASS, // Use Gmail App Password
       },
     });
 
@@ -51,6 +51,11 @@ app.post("/send-email", async (req, res) => {
     console.error("❌ Email send error:", error);
     res.status(500).json({ success: false, message: "❌ Failed to send message" });
   }
+});
+
+// For any unknown route → serve index.html (important for frontend SPA routing)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Start server
