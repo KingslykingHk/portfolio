@@ -54,7 +54,8 @@ app.post("/send-email", async (req, res) => {
 });
 
 // For any unknown route → serve index.html (important for frontend SPA routing)
-app.get("*", (req, res) => {
+// ✅ Correct - use a regex or wildcard
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
