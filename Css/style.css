@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root {
   --header-height: 3rem;
@@ -18,7 +18,7 @@
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -59,65 +59,73 @@
 /* Add these styles to your existing CSS */
 
 /* Contact form styling */
-#contactForm {
-  background-color: var(--container-color);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+#contact-form {
+  background: none;
+  padding: 0;
+  border-radius: 0.75rem;
+  box-shadow: none;
   width: 100%;
   max-width: 500px;
+  border: 2px solid #ced2d5;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
 }
 
 .form-group {
-  margin-bottom: var(--margin-bottom-0-75);
+  margin-bottom: 1rem;
 }
 
 .form-group label {
   display: block;
-  font-weight: var(--font-medium);
-  margin-bottom: var(--margin-bottom-0-25);
-  color: var(--title-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #222;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--scroll-bar-color);
-  border-radius: 0.5rem;
-  background-color: var(--input-color);
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  color: var(--text-color);
-  transition: border-color 0.3s;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 1rem;
+  color: #222;
+  transition: border-color 0.2s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--first-color);
+  border-color: #007bff;
 }
 
 .form-group textarea {
-  min-height: 120px;
+  min-height: 100px;
   resize: vertical;
 }
 
-#contactForm button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: white;
-  padding: 0.75rem 1.5rem;
+#contact-form button[type='submit'] {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: #007bff;
+  color: #fff;
+  padding: 0.75rem 2rem;
   border: none;
-  border-radius: 0.5rem;
-  font-weight: var(--font-medium);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
-  width: 100%;
+  transition: background 0.2s;
+  margin-top: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  width: auto;
 }
 
-#contactForm button:hover {
-  background-color: var(--first-color-alt);
+#contact-form button[type='submit']:hover {
+  background: #0056b3;
 }
 
 /* Update contact container for proper layout */
@@ -143,9 +151,6 @@ body.dark-theme {
   --container-color: hsl(var(--hue-color), 29%, 16%);
   transition: 0.3s ease-in;
 }
-
-
-
 
 .nav-btns {
   display: flex;
@@ -524,8 +529,8 @@ img {
   margin-bottom: 1rem;
   margin-right: 1rem;
   font-size: var(--small-font-size);
-  background: #4c53c8;  /* New background color */
-  
+  background: #4c53c8; /* New background color */
+
   border-radius: 5px;
   font-weight: 600;
   color: #ffffff; /* Text color */
@@ -537,7 +542,6 @@ img {
   color: #fff; /* Hover text color */
 }
 
-
 /* qualifi  */
 
 .qualification-tabs {
@@ -547,13 +551,9 @@ img {
   color: #fff;
 }
 
-
-
 .qualification-button:hover {
   color: var(--first-color);
 }
-
-
 
 .qualification-data {
   display: grid;
@@ -735,7 +735,7 @@ img {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: "";
+  content: '';
 }
 
 .swiper-icon {
@@ -1251,55 +1251,54 @@ img {
     bottom: -4.5rem;
   }
   .contact-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-form {
-  background-color: var(--container-color);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-}
+  form {
+    background-color: var(--container-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
 
-.form-group {
-  margin-bottom: var(--margin-bottom-0-75);
-}
+  .form-group {
+    margin-bottom: var(--margin-bottom-0-75);
+  }
 
-label {
-  display: block;
-  font-weight: var(--font-medium);
-  margin-bottom: var(--margin-bottom-0-25);
-}
+  label {
+    display: block;
+    font-weight: var(--font-medium);
+    margin-bottom: var(--margin-bottom-0-25);
+  }
 
-input,
-textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--scroll-bar-color);
-  border-radius: 0.5rem;
-  background-color: var(--input-color);
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-}
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--scroll-bar-color);
+    border-radius: 0.5rem;
+    background-color: var(--input-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  }
 
-button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: var(--font-medium);
-  cursor: pointer;
-  transition: background 0.3s;
-}
+  button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: background 0.3s;
+  }
 
-button:hover {
-  background-color: var(--first-color-alt);
-}
-
+  button:hover {
+    background-color: var(--first-color-alt);
+  }
 }

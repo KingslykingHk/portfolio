@@ -158,7 +158,7 @@ function showToast(message, type = 'success') {
     text: message,
     duration: 3000,
     gravity: 'top',
-    position: 'right',
+    position: 'center', // valid values: 'left', 'center', 'right'
     style: { background: type === 'success' ? '#4BB543' : '#FF5252' },
     close: true,
     stopOnFocus: true,
