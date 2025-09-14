@@ -56,6 +56,83 @@
   }
 }
 
+/* Add these styles to your existing CSS */
+
+/* Contact form styling */
+#contactForm {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: var(--margin-bottom-0-75);
+}
+
+.form-group label {
+  display: block;
+  font-weight: var(--font-medium);
+  margin-bottom: var(--margin-bottom-0-25);
+  color: var(--title-color);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--scroll-bar-color);
+  border-radius: 0.5rem;
+  background-color: var(--input-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--first-color);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#contactForm button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+#contactForm button:hover {
+  background-color: var(--first-color-alt);
+}
+
+/* Update contact container for proper layout */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
 /* dark color scheme  */
 body.dark-theme {
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
@@ -805,9 +882,7 @@ img {
   flex-direction: column;
   row-gap: 1.5rem;
 }
-.footer-link {
-  /* hii  */
-}
+
 .footer-link:hover {
   color: var(--first-color-lighter);
 }
