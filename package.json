@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Hypefolio is a feature-rich portfolio website designed to showcase your projects and skills in a captivating way. Built with a tech stack of HTML, CSS, and JavaScript, this responsive portfolio ensures a seamless experience across devices. ## Demo",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
