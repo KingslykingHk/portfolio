@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpg" href="/Assets/Icons/kingsly4.jpg" />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="/Assets/Icons/king in portfolio.jpg"
+    />
     <title>kingsly portfolio</title>
     <link rel="stylesheet" href="Libraries/swiper-bundle.min.css" />
     <link rel="stylesheet" href="Css/style.css" />
@@ -119,7 +123,7 @@
                     width="2000"
                     height="200"
                     preserveAspectRatio="xMidYMid meet"
-                    href="Assets/Icons/nature king.jpg"
+                    href="Assets/Icons/king in portfolio.jpg"
                   />
                 </g>
               </svg>
@@ -532,7 +536,7 @@
                   inquiries via Nodemailer.
                 </p>
                 <a
-                  href="https://tech-yfront-apdz.vercel.app/"
+                  href="https://tech-project-web.vercel.app/"
                   target="_blank"
                   class="button button-flex button-small portfolio-button"
                   >Project Link
@@ -617,8 +621,8 @@
         <span class="section-subtitle">Get in touch</span>
 
         <div class="contact-container container grid">
-          <!-- Left side: Contact Info -->
-          <div>
+          <!-- Contact Info Cards -->
+          <div class="contact-cards">
             <div class="contact-info">
               <i class="fa-regular fa-envelope contact-icon"></i>
               <div>
@@ -646,27 +650,40 @@
                 </a>
               </div>
             </div>
+
+            <div class="contact-info">
+              <i class="fab fa-whatsapp contact-icon"></i>
+              <div>
+                <h3 class="contact-title">WhatsApp</h3>
+                <a
+                  href="https://wa.me/919025076680"
+                  target="_blank"
+                  class="contact-subtitle"
+                >
+                  +91 9025076680
+                </a>
+              </div>
+            </div>
           </div>
 
-          <!-- Right side: Contact Form -->
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
+          <!-- WhatsApp Quick Action -->
+          <div class="whatsapp-action">
+            <div class="whatsapp-card">
+              <div class="whatsapp-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <h3>Chat Directly</h3>
+              <p>Quick responses guaranteed. Let's discuss your project!</p>
+              <a
+                href="https://wa.me/919025076680"
+                target="_blank"
+                class="whatsapp-btn"
+              >
+                <i class="fab fa-whatsapp"></i>
+                Start Chat on WhatsApp
+              </a>
             </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button type="submit">Send Message</button>
-          </form>
+          </div>
         </div>
       </section>
 
@@ -701,7 +718,6 @@
               <a
                 href="https://github.com/KingslykingHk?tab=repositories"
                 target="_blank"
-                target="_blank"
                 class="footer-social"
               >
                 <i class="fa-brands fa-github"></i>
@@ -718,6 +734,15 @@
           <p class="footer-copy">By Kingsly - Kingsly Dev</p>
         </div>
       </footer>
+
+      <!-- Floating WhatsApp Button -->
+      <a
+        href="https://wa.me/919025076680"
+        class="floating-whatsapp"
+        target="_blank"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
     </main>
 
     <a href="#home" class="scrollup" id="scroll-up">
@@ -729,5 +754,183 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+
+    <style>
+      /* WhatsApp Styles */
+      .whatsapp-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .whatsapp-card {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        color: white;
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .whatsapp-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .whatsapp-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .whatsapp-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .whatsapp-card p {
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+      }
+
+      .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: white;
+        color: #25d366;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-btn:hover {
+        background: #f0f0f0;
+        transform: scale(1.05);
+      }
+
+      .contact-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .contact-info:hover {
+        transform: translateY(-3px);
+      }
+
+      .contact-icon {
+        font-size: 1.5rem;
+        color: #25d366;
+      }
+
+      .contact-title {
+        color: black;
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .contact-subtitle {
+        color: #4b5147;
+        text-decoration: none;
+      }
+
+      .contact-subtitle:hover {
+        color: #25d366;
+      }
+
+      /* Floating WhatsApp Button */
+      .floating-whatsapp {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 25px;
+        right: 25px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: pulse-whatsapp 2s infinite;
+        transition: all 0.3s ease;
+      }
+
+      .floating-whatsapp:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+      }
+
+      @keyframes pulse-whatsapp {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .contact-container {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .whatsapp-card {
+          background: linear-gradient(135deg, #25d366, #128c7e);
+          padding: 2rem;
+          border-radius: 1rem;
+          text-align: center;
+          color: white;
+          box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+          transition: transform 0.3s ease;
+          /* Bouncy jump animation */
+          animation: bounce 2s infinite ease-in-out;
+        }
+
+        .whatsapp-card:hover {
+          transform: translateY(-5px);
+          animation-play-state: paused;
+        }
+
+        @keyframes bounce {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+          60% {
+            transform: translateY(-10px);
+          }
+          70% {
+            transform: translateY(-15px);
+          }
+          80% {
+            transform: translateY(-5px);
+          }
+        }
+      }
+    </style>
   </body>
 </html>
